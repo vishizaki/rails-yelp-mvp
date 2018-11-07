@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <div class="mycontainer">
+    <h1>Restaurants</h1>
+    <% @restaurants.each do |restaurant| %>
+
+    <p>
+       <%= link_to restaurant.name, restaurant_path(restaurant) %>
+       <%= link_to "Delete", restaurant_path(restaurant), method: :delete %>
+       </p>
+    <% end %>
+
+    <br>
+    <p> <%= link_to "+ Create a new restaurant", new_restaurant_path %></p>
+  </div>
+</div>
